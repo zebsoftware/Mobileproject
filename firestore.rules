@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users collection - temporarily open
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Students collection - temporarily open
+    match /students/{studentId} {
+      allow read, write: if true;
+    }
+  }
+}
+
